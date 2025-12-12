@@ -1,14 +1,26 @@
-# Refusal in Language Models Is Mediated by a Single Direction
+# Exercise: Refusal in Language Models Is Mediated by a Single Direction
 
 **Content warning**: This repository contains text that is offensive, harmful, or otherwise inappropriate in nature.
 
-This repository contains code and results accompanying the paper "Refusal in Language Models Is Mediated by a Single Direction".
-In the spirit of scientific reproducibility, we provide code to reproduce the main results from the paper.
+This repository contains code that is derived from the code supplements of the paper "Refusal in Language Models Is Mediated by a Single Direction".
 
 - [Paper](https://arxiv.org/abs/2406.11717)
 - [Blog post](https://www.lesswrong.com/posts/jGuXSZgv6qfdhMCuJ/refusal-in-llms-is-mediated-by-a-single-direction)
 
-## Setup
+To run the code for this exercise, we advice you to run it in Google Colab which comes with enough free resources for the models we're using. Alternatively, you can also run it on your own hardware.
+
+## Google Colab (recommended)
+
+The exercise is contained in a Jupyter notebook (see: [`exercise.ipynb`](https://github.com/eichinflo/refusal_direction_exercise/blob/main/exercise.ipynb)). We designed this exercise such that you can run it in Google Colab (basically a cloud solution to running Jupyter notebooks) directly. To run it, you will need access to accounts for Google and Huggingface (both free). Then, you can navigate to [this notebook](https://colab.research.google.com/drive/14khwtjUrguBYZx8R2TgUtBsXScXX3YZB?usp=sharing), create a copy, and start working on the exercise.
+
+## Run Jupyter Notebook locally
+
+If you have your own GPU setup, you can simply fork this repo and start working on [`exercise.ipynb`](https://github.com/eichinflo/refusal_direction_exercise/blob/main/exercise.ipynb). You might want to check Manual Setup below in case the notebook fails to set up the correct environment.
+
+
+## Manual Setup
+
+If you want to run/play with the code by yourself in your own environment, you can use the following to get started:
 
 ```bash
 git clone https://github.com/andyrdt/refusal_direction.git
@@ -19,7 +31,7 @@ source setup.sh
 The setup script will prompt you for a HuggingFace token (required to access gated models) and a Together AI token (required to access the Together AI API, which is used for evaluating jailbreak safety scores).
 It will then set up a virtual environment and install the required packages.
 
-## Reproducing main results
+### Reproducing main results from paper
 
 To reproduce the main results from the paper, run the following command:
 
@@ -48,25 +60,10 @@ For convenience, we have included pipeline artifacts for the smallest model in e
 - [`meta-llama/llama-2-7b-chat-hf`](/pipeline/runs/llama-2-7b-chat-hf/)
 - [`meta-llama/meta-llama-3-8b-instruct`](/pipeline/runs/meta-llama-3-8b-instruct/)
 
-## Minimal demo Colab
-
-As part of our [blog post](https://www.lesswrong.com/posts/jGuXSZgv6qfdhMCuJ/refusal-in-llms-is-mediated-by-a-single-direction), we included a minimal demo of bypassing refusal. This demo is available as a [Colab notebook](https://colab.research.google.com/drive/1a-aQvKC9avdZpdyBn4jgRQFObTPy1JZw).
-
-## As featured in
-
-Since publishing our initial [blog post](https://www.lesswrong.com/posts/jGuXSZgv6qfdhMCuJ/refusal-in-llms-is-mediated-by-a-single-direction) in April 2024, our methodology has been independently reproduced and used many times. In particular, we acknowledge [Fail](https://huggingface.co/failspy)[Spy](https://x.com/failspy) for their work in reproducing and extending our methodology.
-
-Our work has been featured in:
-- [HackerNews](https://news.ycombinator.com/item?id=40242939)
-- [Last Week in AI podcast](https://open.spotify.com/episode/2E3Fc50GVfPpBvJUmEwlOU)
-- [Llama 3 hackathon](https://x.com/AlexReibman/status/1789895080754491686)
-- [Applying refusal-vector ablation to a Llama 3 70B agent](https://www.lesswrong.com/posts/Lgq2DcuahKmLktDvC/applying-refusal-vector-ablation-to-a-llama-3-70b-agent)
-- [Uncensor any LLM with abliteration](https://huggingface.co/blog/mlabonne/abliteration)
-
 
 ## Citing this work
 
-If you find this work useful in your research, please consider citing our [paper](https://arxiv.org/abs/2406.11717):
+If you find this work useful in your research, please consider citing their [paper](https://arxiv.org/abs/2406.11717):
 ```tex
 @article{arditi2024refusal,
   title={Refusal in Language Models Is Mediated by a Single Direction},
